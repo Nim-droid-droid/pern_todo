@@ -5,6 +5,12 @@ const cors = require("cors");
 const pool = require("./db");
 const port = 5000;
 
+// ROUTES //
+// GET/READ Get    all to do 
+// Get a to do 
+// PUT/UPDATE    Update a to do 
+// DELETE/DELETE    Delete a to do 
+
 // Express MIDDLEWARE //
 // everytime u use middlewear u have to use use()
 app.use(cors() )

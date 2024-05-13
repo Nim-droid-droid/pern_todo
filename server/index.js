@@ -6,6 +6,10 @@ const pool = require("./db");
 const port = 5000;
 
 // ROUTES //
+// Im going to use the pool connection to run queries on each of these routes:
+// POST/CREATE    Create a to do 
+  // in Express everything you write in relations to actions e.g. app.get() app.post() etc is middleware cuz it acts in-between the request & response (user makes a POST request triggering the app.post() middleware code i wrote) 
+  // app.post(endpoint, callback)
 // GET/READ Get    all to do 
 // Get a to do 
 // PUT/UPDATE    Update a to do 

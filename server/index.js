@@ -11,11 +11,12 @@ const port = 5000;
 // in Express everything you write in relations to actions e.g. app.get() app.post() etc is middleware cuz it acts in-between the request & response (user makes a POST request triggering the app.post() middleware code i wrote) 
 
 // POST/CREATE    Create a to do 
+  // Make a asyn POST req to "/todos" -> localhost:5000/todos notice the "/todos" at the end thats the endpoint the req is sent to. 
 // app.post(endpoint, callback)
 app.post("/todos", async(req, res)=>{
 })
 
-// GET/READ    Get all to do 
+// GET/READ Get    all to do 
 // Get a to do 
 // PUT/UPDATE    Update a to do 
 // DELETE/DELETE    Delete a to do 

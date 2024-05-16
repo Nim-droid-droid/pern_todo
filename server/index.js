@@ -12,11 +12,13 @@ const port = 5000;
 
 // POST/CREATE    Create a to do 
   // Make a asyn POST req to "/todos" -> localhost:5000/todos notice the "/todos" at the end thats the endpoint the req is sent to. 
+  // Async cuz whenever we create data its going to take some time to get data back. Async provides me with await which waits for the func to complete before it continues.
 // app.post(endpoint, callback)
 app.post("/todos", async(req, res)=>{
 })
 
-// GET/READ Get    all to do 
+// GET/READ    
+// Get all to do 
 // Get a to do 
 // PUT/UPDATE    Update a to do 
 // DELETE/DELETE    Delete a to do 

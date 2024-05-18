@@ -13,6 +13,7 @@ const port = 5000;
 // POST/CREATE    Create a to do 
   // Make a asyn POST req to "/todos" -> localhost:5000/todos notice the "/todos" at the end thats the endpoint the req is sent to. 
   // Async cuz whenever we create data its going to take some time to get data back. Async provides me with await which waits for the func to complete before it continues.
+  // Express has no opinion on how you fetch data from the server, so it uses the most basic approach which is to use the API built into the browser to make asynchronous request to different network resources by using HTTP request
 // app.post(endpoint, callback)
 app.post("/todos", async(req, res)=>{
 })

@@ -16,6 +16,11 @@ const port = 5000;
   // Express has no opinion on how you fetch data from the server, so it uses the most basic approach which is to use the API built into the browser to make asynchronous request to different network resources by using HTTP request
 // app.post(endpoint, callback)
 app.post("/todos", async(req, res)=>{
+  try {
+    
+  } catch (err) {
+    console.error(err.message);
+  }
 })
 
 // GET/READ    

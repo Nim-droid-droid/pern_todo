@@ -20,12 +20,20 @@ app.use(express.json() )  //req.body
   // Async cuz whenever we create data its going to take some time to get data back. Async provides me with await which waits for the func to complete before it continues.
   // Express has no opinion on how you fetch data from the server, so it uses the most basic approach which is to use the API built into the browser to make asynchronous request to different network resources by using HTTP request
 // app.post(endpoint, callback)
-app.post("/todos", async(req, res)=>{  
-  // need to do error handling if its 1 of the 2 things: data from other sources or user input
+app.post("/todos", async(req, res)=>{
+  // await - wait for the function to complete before continuing/calling the callback function
+  // Error handling
+  // need to do error handling if its 1 of the 2 things: data from other sources or user input, so side effects management
   // user input error handling
   try {
+    console.log(req.body)  //test
+
     // Get data from clients to determine what exactly I'm going to add
-    console.log(req.body)
+    // since i have access to req.body i can now test out (write JSON data) for POST /todos route in Postman
+      // extracts prop named description from req.body obj - req.body is coming from Postman. In Postman i created a prop in JSON obj for /todos POST called description, im just destructuring it here
+      // description var holds the extracted value
+    const { description } = req.body;
+
   } catch (err) {
     console.error(err.message);
   }

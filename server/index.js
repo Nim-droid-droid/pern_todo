@@ -34,6 +34,25 @@ app.post("/todos", async(req, res)=>{
       // description var holds the extracted value
     const { description } = req.body;
 
+    // INSERT A NEW TODO
+    // Builds/INSERT a new todo using an asynchronous DB query & stores the result in a constant variable named newTodo.
+    
+    // Send msg to DB using query()
+    // This line of code essentially attempts to INSERT a new todo item into the todo table using the value stored in the description variable. It uses an asynchronous DB operation & await to ensure the code waits for the query to finish before proceeding.
+    
+      // await pool.query(...) is an asynchronous call that executes a SQL query on the DB
+        // await is used because pool.query is asynchronous. It tells JS to pause execution of the current function at this point until the query finishes.
+      // Use pool lib then its query method to executes a SQL query to insert data query on the 1st available idle client on (postgres) todo DB & return its result. 
+        // It returns a Promise that resolves with the query result OR rejects with an error.
+
+      // INSERT statement used to add a new record into a table named "todo", 
+      // inside it's column named "description", 
+      // "$1" is a placeholder/var for the value to be inserted (which will be provided later). 
+      // [description] is the val of $1 - [description] arr intended to hold the values to be inserted for the placeholder/var $1 in this query. 
+      // Assuming description was extracted from the request body earlier in the code, this arr ensures the correct value gets inserted into the description column of the new todo item 
+
+    const newTodo = await pool.query("INSERT INTO todo (description) VALUES($1)", [description]);
+    
   } catch (err) {
     console.error(err.message);
   }

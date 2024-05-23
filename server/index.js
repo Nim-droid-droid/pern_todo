@@ -19,6 +19,7 @@ app.use(express.json() )  //req.body
   // Make a asyn POST req to "/todos" -> localhost:5000/todos notice the "/todos" at the end thats the endpoint the req is sent to. 
   // Async cuz whenever we create data its going to take some time to get data back. Async provides me with await which waits for the func to complete before it continues.
   // Express has no opinion on how you fetch data from the server, so it uses the most basic approach which is to use the API built into the browser to make asynchronous request to different network resources by using HTTP request
+
 // app.post(endpoint, callback)
 app.post("/todos", async(req, res)=>{
   // await - wait for the function to complete before continuing/calling the callback function
@@ -45,11 +46,18 @@ app.post("/todos", async(req, res)=>{
       // Use pool lib then its query method to executes a SQL query to insert data query on the 1st available idle client on (postgres) todo DB & return its result. 
         // It returns a Promise that resolves with the query result OR rejects with an error.
 
-      // INSERT statement used to add a new record into a table named "todo", 
+      // ( INSERT statement used to add a new record into a table named "todo", 
       // inside it's column named "description", 
       // "$1" is a placeholder/var for the value to be inserted (which will be provided later). 
-      // [description] is the val of $1 - [description] arr intended to hold the values to be inserted for the placeholder/var $1 in this query. 
-      // Assuming description was extracted from the request body earlier in the code, this arr ensures the correct value gets inserted into the description column of the new todo item 
+      // $1 is the val of [description] - [description] arr intended to hold the values to be inserted for the placeholder/var $1 in this query. 
+      // Assuming description was extracted from the request body earlier in the code, this arr ensures the correct value gets inserted into the description column of the new todo item )
+      
+    // await, non blocking & Even loop
+      // await pauses the execution of the async function at this point, while it waits for a val (successful or handle any errors) to return. 
+      
+      // But it doesnt block the entire program execution. Only the async func that's handling the POST request (the current function) gets paused. 
+
+      // While waiting for the query to complete, the Event Loop takes over & starts processing other code in the program that's not waiting for something e.g. Event handlers waiting for user interactions, other asynchronous operations that haven't reached an await yet or any part of your application logic that doesn't depend on the outcome of this query etc
 
     const newTodo = await pool.query("INSERT INTO todo (description) VALUES($1)", [description]);
     

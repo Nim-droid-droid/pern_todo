@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-// by usiing pool lib i can run queries with postgres
+// by using pool lib (pg library (node-postgres)) i can run queries on postgres DB
 const pool = require("./db");
 const port = 5000;
 // whenever im building fullstack app i need to get data from the client side, only way to get that data is from the request.body property thats inside the request obj that comes with the request sent from the clients machine to the server
@@ -52,19 +52,23 @@ app.post("/todos", async(req, res)=>{
       // $1 is the val of [description] - [description] arr intended to hold the values to be inserted for the placeholder/var $1 in this query. 
       // Assuming description was extracted from the request body earlier in the code, this arr ensures the correct value gets inserted into the description column of the new todo item )
       
-    // await, non blocking & Even loop
+    // Await, non blocking & Even loop
       // await pauses the execution of the async function at this point, while it waits for a val (successful or handle any errors) to return. 
       
       // But it doesnt block the entire program execution. Only the async func that's handling the POST request (the current function) gets paused. 
 
       // While waiting for the query to complete, the Event Loop takes over & starts processing other code in the program that's not waiting for something e.g. Event handlers waiting for user interactions, other asynchronous operations that haven't reached an await yet or any part of your application logic that doesn't depend on the outcome of this query etc
 
+    // DB Query Finishes
+      // Once the DB finishes processing the INSERT query (successfully or with an error), an event is added to the event queue.
+
     const newTodo = await pool.query("INSERT INTO todo (description) VALUES($1)", [description]);
-    
+
   } catch (err) {
     console.error(err.message);
   }
-})
+ }
+)
 
 // GET/READ    
 // Get all to do 

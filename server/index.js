@@ -65,6 +65,9 @@ app.post("/todos", async(req, res)=>{
 
     // 4 - Resuming the Paused Function
       // The Event Loop monitors the Event Queue. When the query completion event is detected, the Event Loop tries to resume the function that was paused at await (the POST request handler).
+    
+    // 5 - Code After await Executes
+      // The await allows the POST request handler function to pick up where it left off. It can now use the result of the query (if successful) or handle any errors that might have occurred.
 
     const newTodo = await pool.query("INSERT INTO todo (description) VALUES($1) RETURNING *", [description]);
 

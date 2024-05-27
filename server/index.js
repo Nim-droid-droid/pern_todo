@@ -69,6 +69,9 @@ app.post("/todos", async(req, res)=>{
     // 5 - Code After await Executes
       // The await allows the POST request handler function to pick up where it left off. It can now use the result of the query (if successful) or handle any errors that might have occurred.
 
+      // Summary: await pauses the function's execution until the awaited Promise settles, making the code easier to read and reason about. Error handling using try...catch is crucial for asynchronous operations & the specific behavior of pool.query (e.g. executes a single SQL query) depends on the DB system u're using.
+
+    // pool.query is great in many situations except if u are working with transactions. query just send a message to the DB
     const newTodo = await pool.query("INSERT INTO todo (description) VALUES($1) RETURNING *", [description]);
 
   } catch (err) {
@@ -79,7 +82,7 @@ app.post("/todos", async(req, res)=>{
 
 // GET/READ    
 // Get all to do 
-// Get a to do 
+// Get a specific todo based on id
 // PUT/UPDATE    Update a to do 
 // DELETE/DELETE    Delete a to do 
 

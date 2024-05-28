@@ -11,6 +11,7 @@ When your Express application receives an HTTP request with a JSON payload (typi
 app.use(express.json() )  //req.body
 
 // ROUTES //
+// RESTful API in Postgres:
 // Im going to use the pool connection to run queries on each of these routes:
 
 // in Express everything you write in relations to actions e.g. app.get() app.post() etc is middleware cuz it acts in-between the request & response (user makes a POST request triggering the app.post() middleware code i wrote) 
@@ -73,6 +74,16 @@ app.post("/todos", async(req, res)=>{
 
     // pool.query is great in many situations except if u are working with transactions. query just send a message to the DB
     const newTodo = await pool.query("INSERT INTO todo (description) VALUES($1) RETURNING *", [description]);
+    
+    // Sent back the data stored in the newTodo variable as a JSON response back to the client (a HTTP res that contains things like Content-Type Header etc)
+      // res - is used to send data back to the client that made the request. res is the response object provided by the Express framework.
+      // .json - Express method for sending data in JSON format.
+        // Inside it'd (), u specify the data u want to send as a JSON response. in this case newTodo
+      // newTodo - holds the result of the DB query that inserted the newly created todo item. 
+    // res.json(newTodo);
+    
+    // get the 1st row 
+    res.json(newTodo.rows[0]);
 
   } catch (err) {
     console.error(err.message);

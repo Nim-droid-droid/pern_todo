@@ -93,6 +93,18 @@ app.post("/todos", async(req, res)=>{
 
 // GET/READ    
 // Get all to do 
+app.get("/todos", async(req, res)=>{
+  try {
+    // no need for ''RETURNING *'' cuz SELECT gives the data back
+    const allTodos = await pool.query("SELECT * FROM todo")
+    res.json(allTodos.rows)
+
+  } catch (error) {
+    console.error(error.message)
+  }
+ }
+)
+
 // Get a specific todo based on id
 // PUT/UPDATE    Update a to do 
 // DELETE/DELETE    Delete a to do 

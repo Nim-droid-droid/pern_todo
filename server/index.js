@@ -124,8 +124,11 @@ app.get("/todos", async(req, res)=>{
 
 // app.get("/todos/:num"...
   // http://localhost:5000/todos/random    ->  { num: 'random' } in req.params.num
+
+// async to allow the use of await
 app.get("/todos/:id", async(req, res)=>{
   try {
+    // Log the route parameters - to see everything in the params obj - so the todos & id of each todo in JSON format in Postman
     console.log(req.params)
 
     const {id} = req.params;
@@ -141,6 +144,7 @@ app.get("/todos/:id", async(req, res)=>{
 )
 // PUT/UPDATE    Update a to do 
 // DELETE/DELETE    Delete a to do 
+
 
 app.listen(port, () => {
   console.log(`serve is running in port: ${port}`);

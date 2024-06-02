@@ -25,7 +25,7 @@ app.use(express.json() );  //req.body
   // Make a asyn POST req to "/todos" -> localhost:5000/todos notice the "/todos" at the end thats the endpoint the req is sent to. 
   // Async cuz whenever we create data its going to take some time to get data back. Async provides me with await which waits for the func to complete before it continues.
   // Express has no opinion on how you fetch data from the server, so it uses the most basic approach which is to use the API built into the browser to make asynchronous request to different network resources by using HTTP request
-  
+
 // app.post(endpoint, callback)
 app.post("/todos", async(req, res)=>{
   // await - wait for the function to complete before continuing/calling the callback function
@@ -131,6 +131,7 @@ app.get("/todos/:id", async(req, res)=>{
     // Log the route parameters - to see everything in the params obj - so the todos & id of each todo in JSON format in Postman
     console.log(req.params)
 
+    // Grab & store id val from the URL - do that by destructuring id val from the route/req.params
     const {id} = req.params;
 
     const todo = await pool.query("SELECT * FROM todo WHERE todo_id = $1", [id])

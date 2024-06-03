@@ -134,6 +134,8 @@ app.get("/todos/:id", async(req, res)=>{
     // Grab & store id val from the URL - do that by destructuring id val from the route/req.params
     const {id} = req.params;
 
+    // SQL query against the PostgreSQL DB
+    // SELECT * FROM table_name WHERE condition = condition2
     const todo = await pool.query("SELECT * FROM todo WHERE todo_id = $1", [id])
 
     res.json(todo.rows[0])

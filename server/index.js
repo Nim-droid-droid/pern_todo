@@ -137,6 +137,7 @@ app.get("/todos/:id", async(req, res)=>{
     // SQL query against the PostgreSQL DB
     // SELECT * FROM table_name WHERE condition = condition2
       // retrieves all columns from the todo table where the todo_id matches the provided value.
+        // $1 is a parameterized placeholder in the SQL query. [id] is an array containing the actual value to replace the placeholder. Here, id will replace $1.
     const todo = await pool.query("SELECT * FROM todo WHERE todo_id = $1", [id])
 
     res.json(todo.rows[0])

@@ -139,6 +139,7 @@ app.get("/todos/:id", async(req, res)=>{
       // retrieves all columns from the todo table where the todo_id matches the provided value.
         // $1 is a parameterized placeholder in the SQL query. [id] is an array containing the actual value to replace the placeholder. Here, id will replace $1.
           // Parameterized queries are a way to securely pass user-provided data into SQL queries, preventing SQL injection attacks. $1 will be replaced by the first element in the array [id].
+      // the = operator filters the search
     const todo = await pool.query("SELECT * FROM todo WHERE todo_id = $1", [id])
 
     res.json(todo.rows[0])

@@ -143,6 +143,7 @@ app.get("/todos/:id", async(req, res)=>{
     const todo = await pool.query("SELECT * FROM todo WHERE todo_id = $1", [id])
 
     // Sending Response
+    // sends the first row of the result (which is the todo item with the specified todo_id) back to the client as a JSON response.
     res.json(todo.rows[0])
   } catch (err) {
     // Logs the error message

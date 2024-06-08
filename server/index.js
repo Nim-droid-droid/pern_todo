@@ -142,6 +142,7 @@ app.get("/todos/:id", async(req, res)=>{
       // the = operator filters the search
     const todo = await pool.query("SELECT * FROM todo WHERE todo_id = $1", [id])
 
+    // Sending Response
     res.json(todo.rows[0])
   } catch (err) {
     // Logs the error message

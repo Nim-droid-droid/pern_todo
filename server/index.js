@@ -149,12 +149,14 @@ app.get("/todos/:id", async(req, res)=>{
   } catch (err) {
     // Logs the error message
     console.error(err.message)
+    
+    // Sends a 500 status code and error message
+    response.status(500).send("Server Error"); 
   }
  }
 )
 // PUT/UPDATE    Update a to do 
 // DELETE/DELETE    Delete a to do 
-
 
 
 app.listen(port, () => {

@@ -144,6 +144,7 @@ app.get("/todos/:id", async(req, res)=>{
 
     // Sending Response
     // sends the first row of the result (which is the todo item with the specified todo_id) back to the client as a JSON response.
+    // http://localhost:5000/todos/1    ->  (:id is now 1) will give me the todo with the id 1 in JSON format
     res.json(todo.rows[0])
   } catch (err) {
     // Logs the error message
@@ -153,6 +154,7 @@ app.get("/todos/:id", async(req, res)=>{
 )
 // PUT/UPDATE    Update a to do 
 // DELETE/DELETE    Delete a to do 
+
 
 
 app.listen(port, () => {

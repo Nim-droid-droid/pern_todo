@@ -160,7 +160,9 @@ app.put("/todos/:id", async(req, res)=>{
   try {
 
     const {id} = req.params;
+    const {description} = req.body;
 
+    res.json("TOdo was updated!");
   } catch (error) {
   }
  }

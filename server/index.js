@@ -158,7 +158,7 @@ app.get("/todos/:id", async(req, res)=>{
 // PUT/UPDATE    Update a to do 
 app.put("/todos/:id", async(req, res)=>{
   try {
-    
+// req.params VS req.body VS req.query
     const {id} = req.params;
     const {description} = req.body;
 

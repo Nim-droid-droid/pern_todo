@@ -160,7 +160,8 @@ app.put("/todos/:id", async(req, res)=>{
   try {
 // req.params VS req.body VS req.query
   // Use req.params when you have dynamic segments in your route patterns, 
-  // req.body for data sent in the request body
+  // req.body for data sent in the request body,
+  // req.query when you want to retrieve data from the query string.
     const {id} = req.params;
     const {description} = req.body;
 

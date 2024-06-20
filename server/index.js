@@ -167,6 +167,7 @@ app.put("/todos/:id", async(req, res)=>{
 
     const updateTodo = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2 ", [description, id]);
 
+    // send bk response
     res.json("TOdo was updated!");
   } catch (error) {
     console.error(error.message);

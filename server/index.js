@@ -177,7 +177,7 @@ app.put("/todos/:id", async(req, res)=>{
 )
 
 // DELETE/DELETE    Delete a to do 
-
+app.delete("/todos/:id")
 
 
 app.listen(port, () => {

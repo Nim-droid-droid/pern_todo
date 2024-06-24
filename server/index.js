@@ -179,7 +179,9 @@ app.put("/todos/:id", async(req, res)=>{
 // DELETE/DELETE    Delete a to do 
 app.delete("/todos/:id", async(req, res)=>{
   try {
+
   } catch (err) {
+    console.error(err.message)
   }
  }
 )

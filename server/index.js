@@ -162,8 +162,8 @@ app.put("/todos/:id", async(req, res)=>{
   // Use req.params when you have dynamic segments in your route patterns, 
   // req.body for data sent in the request body,
   // req.query when you want to retrieve data from the query string.
-    const {id} = req.params;
-    const {description} = req.body;
+    const {id} = req.params; // Extract the id from the request parameters
+    const {description} = req.body; // Extract the description from the request body
 
     const updateTodo = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2 ", [description, id]);
 

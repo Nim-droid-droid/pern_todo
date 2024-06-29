@@ -165,6 +165,7 @@ app.put("/todos/:id", async(req, res)=>{
     const {id} = req.params; // Extract the id from the request parameters
     const {description} = req.body; // Extract the description from the request body
 
+    // Executes the UPDATE query to update the todo item's description in the database.
     const updateTodo = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2 ", [description, id]);
 
     // send bk response
@@ -172,6 +173,9 @@ app.put("/todos/:id", async(req, res)=>{
     res.json("TOdo was updated!");
   } catch (error) {
     console.error(error.message);
+
+    // Send a 500 status code and error message to the client
+    // response.status(500).send("Server Error"); 
   }
  }
 )

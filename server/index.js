@@ -166,6 +166,7 @@ app.put("/todos/:id", async(req, res)=>{
     const {description} = req.body; // Extract the description from the request body
 
     // Executes the UPDATE query to update the todo item's description in the database.
+    // This query updates the description field in the todo table for the row where todo_id matches a specific value.
     const updateTodo = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2 ", [description, id]);
 
     // send bk response

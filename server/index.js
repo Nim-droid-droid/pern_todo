@@ -167,6 +167,8 @@ app.put("/todos/:id", async(req, res)=>{
 
     // Executes the UPDATE query to update the todo item's description in the database.
     // This query updates the description field in the todo table for the row where todo_id matches a specific value.
+      // Declare a constant variable named updateTodo. The await keyword indicates that this line is inside an async function, meaning the code will wait for the pool.query promise to resolve before continuing.
+      // pool is an instance of a PostgreSQL connection pool, created using the pg library (node-postgres).
       // $1 is replaced with the value of description.
       // $2 is replaced with the value of id.
     const updateTodo = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2 ", [description, id]);

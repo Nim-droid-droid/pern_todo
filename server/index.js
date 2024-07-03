@@ -171,6 +171,7 @@ app.put("/todos/:id", async(req, res)=>{
       // pool is an instance of a PostgreSQL connection pool, created using the pg library (node-postgres).
       // $1 is replaced with the value of description.
       // $2 is replaced with the value of id.
+      // The DB updates the specified row, setting its description field to the new value provided.
     const updateTodo = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2 ", [description, id]);
 
     // send bk response

@@ -172,6 +172,7 @@ app.put("/todos/:id", async(req, res)=>{
       // $1 is replaced with the value of description.
       // $2 is replaced with the value of id.
       // The DB updates the specified row, setting its description field to the new value provided.
+      // The result of the query execution is stored in updateTodo. This typically includes metadata about the query execution, such as the number of rows affected.
     const updateTodo = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2 ", [description, id]);
 
     // send bk response

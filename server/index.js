@@ -158,6 +158,7 @@ app.get("/todos/:id", async(req, res)=>{
 // PUT/UPDATE    Update a to do 
 // This route handles:
 // Extracting the id parameter from the request URL.
+// Extracting the description from the request body.
 app.put("/todos/:id", async(req, res)=>{
   try {
 // req.params VS req.body VS req.query

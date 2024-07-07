@@ -159,6 +159,7 @@ app.get("/todos/:id", async(req, res)=>{
 // This route handles:
 // Extracting the id parameter from the request URL.
 // Extracting the description from the request body.
+// Executes the UPDATE query to update the todo item's description in the DB.
 app.put("/todos/:id", async(req, res)=>{
   try {
 // req.params VS req.body VS req.query

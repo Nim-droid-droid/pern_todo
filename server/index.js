@@ -160,6 +160,7 @@ app.get("/todos/:id", async(req, res)=>{
 // Extracting the id parameter from the request URL.
 // Extracting the description from the request body.
 // Executes the UPDATE query to update the todo item's description in the DB.
+// Sends a JSON response back to the client indicating that the update was successful.
 app.put("/todos/:id", async(req, res)=>{
   try {
 // req.params VS req.body VS req.query

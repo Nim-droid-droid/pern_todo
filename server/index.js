@@ -204,6 +204,8 @@ app.delete("/todos/:id", async(req, res)=>{
     res.json("Todo was deleted! :)");
   } catch (err) {
     console.error(err.message)
+    // response.status(500).send("Server Error"); // Send a 500 status code and error message to the client
+
   }
  }
 )

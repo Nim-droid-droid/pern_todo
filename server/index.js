@@ -198,6 +198,7 @@ app.delete("/todos/:id", async(req, res)=>{
     const {id} = req.params;
     
     // The result of the query execution is stored in deleteTodo. This typically includes metadata about the query execution, such as the number of rows affected.
+    // sends the SQL query to the DB to delete the specified todo item.
     const deleteTodo = await pool.query("DELETE FROM todo WHERE todo_id=$1", [id]);
     
     // Send a response back to the client

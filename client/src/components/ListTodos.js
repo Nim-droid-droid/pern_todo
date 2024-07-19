@@ -7,11 +7,14 @@ export default function ListTodos() {
   // Make fetch request to my RESTful API Each time this component renders
   const getTodos = async () => {
     try {
+      // await since it takes time to fetch data. Without this I'm just going to get aPpromise obj with the value pending
+      const response = await fetch("http://localhost:5000/todos");
+
     } catch (err) {
       console.error(err.message);
     }
   };
-
+  
 
   return (
     <>

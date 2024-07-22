@@ -14,6 +14,7 @@ export default function ListTodos() {
       // await since it takes time to parse data. Without this I'm just going to get aPpromise obj with the value pending
       const jsonData = await response.json();
 
+      setTodos(jsonData);
     } catch (err) {
       console.error(err.message);
     }

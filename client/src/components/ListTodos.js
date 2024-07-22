@@ -9,6 +9,8 @@ export default function ListTodos() {
     try {
       // await since it takes time to fetch data. Without this I'm just going to get aPpromise obj with the value pending
       const response = await fetch("http://localhost:5000/todos");
+      // See data step 1
+      // cant simply console log the returned data, i need to parse it somehow & I'm going to do that using JSON format
       // await since it takes time to parse data. Without this I'm just going to get aPpromise obj with the value pending
       const jsonData = await response.json();
 

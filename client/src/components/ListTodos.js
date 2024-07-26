@@ -23,6 +23,7 @@ export default function ListTodos() {
   };
   
   useEffect(()=>{
+    // See data step 2 - now i can see the obj with ALL the todos/data in console 
     getTodos()
   }, []);
 

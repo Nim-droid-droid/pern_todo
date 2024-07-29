@@ -31,7 +31,13 @@ export default function ListTodos() {
   return (
     <>
       <table className="table mt-5 text-center">
-
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
       </table>
     </>
   )

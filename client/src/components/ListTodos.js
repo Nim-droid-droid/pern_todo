@@ -34,7 +34,7 @@ export default function ListTodos() {
         <thead>
           <tr>
             <th>Description</th>
-            <th></th>
+            <th>Edit</th>
             <th></th>
           </tr>
         </thead>

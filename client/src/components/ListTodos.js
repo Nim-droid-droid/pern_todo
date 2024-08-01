@@ -35,7 +35,7 @@ export default function ListTodos() {
           <tr>
             <th>Description</th>
             <th>Edit</th>
-            <th></th>
+            <th>Delete</th>
           </tr>
         </thead>
       </table>

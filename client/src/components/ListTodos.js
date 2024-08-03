@@ -39,7 +39,7 @@ export default function ListTodos() {
           </tr>
         </thead>
         <tbody>
-
+          {todos.map(i => ())}
         </tbody>
       </table>
     </>

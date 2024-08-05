@@ -41,6 +41,8 @@ export default function ListTodos() {
         <tbody>
           {todos.map(i => (
             <tr>
+              <td>{i.description}</td>
+              <td>Edit</td>
             </tr>
           ))}
         </tbody>

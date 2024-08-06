@@ -43,6 +43,7 @@ export default function ListTodos() {
             <tr>
               <td>{i.description}</td>
               <td>Edit</td>
+              <td>Delete</td>
             </tr>
           ))}
         </tbody>

@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-function InputTodo() {
+export default function InputTodo() {
+  const [description, setDescription] = useState("");
+
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
 
-export default InputTodo
+    </>
+  );
+}

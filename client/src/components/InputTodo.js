@@ -6,7 +6,7 @@ export default function InputTodo() {
   return (
     <>
 
-      <form>
+      <form className="d-flex mt-5">
 
       </form>
     </>

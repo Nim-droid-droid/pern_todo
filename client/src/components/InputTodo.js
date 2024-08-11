@@ -5,7 +5,8 @@ export default function InputTodo() {
 
   return (
     <>
-      <h1>PERN Todo List</h1>
+      <div></div>
+      <h1 className="text-center mt-5">PERN Todo List</h1>
 
       <form className="d-flex mt-5">
 

@@ -11,6 +11,7 @@ export default function InputTodo() {
       <form className="d-flex mt-5">
 
         <input
+          type="text"
         />
       </form>
     </>

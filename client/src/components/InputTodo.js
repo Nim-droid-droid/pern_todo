@@ -13,6 +13,7 @@ export default function InputTodo() {
         <input
           type="text"
           className="form-control"
+          value={description}
         />
       </form>
     </>

@@ -18,6 +18,7 @@ export default function InputTodo() {
           value={description}
           onChange={e => setDescription(e.target.value)}
         />
+        <button></button>
       </form>
     </>
   );

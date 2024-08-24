@@ -18,7 +18,7 @@ export default function InputTodo() {
           value={description}
           onChange={e => setDescription(e.target.value)}
         />
-        <button>Add</button>
+        <button className="btn btn-success">Add</button>
       </form>
     </>
   );

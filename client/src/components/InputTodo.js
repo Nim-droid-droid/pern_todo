@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 export default function InputTodo() {
   const [description, setDescription] = useState("");
   
+  // submit form & send data out - now i can add to dos to my DB
   const onSubmitForm = async e => {
 
   };

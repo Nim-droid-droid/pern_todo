@@ -6,7 +6,10 @@ export default function InputTodo() {
   // submit form & send data out - now i can add to dos to my DB
   const onSubmitForm = async e => {
     e.preventDefault();
+    try {
 
+    } catch (err) {
+    }
   };
 
 

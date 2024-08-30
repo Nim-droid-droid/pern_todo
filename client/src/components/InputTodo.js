@@ -7,6 +7,7 @@ export default function InputTodo() {
   const onSubmitForm = async e => {
     e.preventDefault();
     try {
+      const body = { description };
 
     } catch (err) {
       console.error(err.message);

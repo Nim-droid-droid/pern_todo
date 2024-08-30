@@ -8,7 +8,8 @@ export default function InputTodo() {
     e.preventDefault();
     try {
       const body = { description };
-
+      const response = await fetch({
+      });
     } catch (err) {
       console.error(err.message);
     }

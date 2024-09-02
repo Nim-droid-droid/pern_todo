@@ -9,7 +9,7 @@ export default function InputTodo() {
     try {
       const body = { description };
       const response = await fetch("http://localhost:5000/todos", {
-
+        method: "POST"
       });
     } catch (err) {
       console.error(err.message);

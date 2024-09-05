@@ -11,7 +11,7 @@ export default function InputTodo() {
       const response = await fetch("http://localhost:5000/todos", {
         // By default fetch makes a GET request
         method: "POST",
-        headers: 
+        headers: { "Content-Type": "application/json" }
       });
     } catch (err) {
       console.error(err.message);

@@ -12,7 +12,7 @@ export default function InputTodo() {
         // By default fetch makes a GET request
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: 
+        body: JSON.stringify()
       });
     } catch (err) {
       console.error(err.message);

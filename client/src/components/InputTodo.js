@@ -17,6 +17,7 @@ export default function InputTodo() {
 
       console.log(response);
 
+      // Once response has been sent page will refresh & show the changes
       window.location = "/";
     } catch (err) {
       console.error(err.message);

@@ -4,3 +4,4 @@ import ListTodos from './components/ListTodos';
 
 function App() {
 }
+export default App;

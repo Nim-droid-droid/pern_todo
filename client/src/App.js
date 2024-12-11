@@ -4,7 +4,9 @@ import ListTodos from './components/ListTodos';
 
 function App() {
   return (
-    <div className="App"></div>
+    // <div className="App">
+    <>
+    </>
   );
 }
 export default App;

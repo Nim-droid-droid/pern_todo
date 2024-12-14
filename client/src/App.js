@@ -2,7 +2,7 @@ import './App.css';
 import InputTodo from './components/InputTodo';
 import ListTodos from './components/ListTodos';
 
-function App() {
+export default function App() {
   return (
     // <div className="App">
     <>
@@ -11,4 +11,3 @@ function App() {
     </>
   );
 }
-export default App;

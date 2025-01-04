@@ -3,7 +3,7 @@ import React from 'react'
 function EditTodo() {
   return (
     <>
-      <button></button>
+      <button>Edit</button>
     </>
   )
 }

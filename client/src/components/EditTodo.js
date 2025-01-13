@@ -5,7 +5,9 @@ import { useState } from 'react';
 function EditTodo(props) {
   const [value, setValue] = useState(props.task);
 
-  function handleSubmit(e){}
+  function handleSubmit(e){
+    // prevent default action
+  };
   
   return (
     <>

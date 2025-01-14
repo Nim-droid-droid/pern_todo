@@ -7,6 +7,7 @@ function EditTodo(props) {
 
   function handleSubmit(e){
     // prevent default action
+    e.preventDefault();
   };
   
   return (

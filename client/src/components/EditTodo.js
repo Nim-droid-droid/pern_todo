@@ -8,7 +8,7 @@ function EditTodo(props) {
   function handleSubmit(e){
     // prevent default action
     e.preventDefault();
-    // efit todo
+    // edit todo
   };
   
   return (

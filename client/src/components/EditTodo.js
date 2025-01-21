@@ -9,7 +9,7 @@ function EditTodo(props) {
     // prevent default action
     e.preventDefault();
     // edit todo
-    props.editTodo(value, props.task.id);
+    // props.editTodo(value, props.task.id);
   };
   
   return (

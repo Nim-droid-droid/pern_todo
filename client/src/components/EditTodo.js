@@ -10,6 +10,7 @@ function EditTodo(props) {
     e.preventDefault();
     // edit todo
     // props.editTodo(value, props.task.id);
+    editTodo();
   };
   
   return (

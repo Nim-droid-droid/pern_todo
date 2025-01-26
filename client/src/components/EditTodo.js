@@ -15,7 +15,7 @@ function EditTodo(props) {
   
   return (
     <>
-      <button>Edit</button>
+      <form>Edit</form>
     </>
   )
 }

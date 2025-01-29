@@ -15,7 +15,9 @@ function EditTodo(props) {
   
   return (
     <>
-      <form onSubmit={handleSubmit} className="TodoForm">Edit</form>
+      <form onSubmit={handleSubmit} className="TodoForm">
+        <input/>
+      </form>
     </>
   )
 }

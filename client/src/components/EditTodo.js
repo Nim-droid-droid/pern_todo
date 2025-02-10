@@ -16,7 +16,7 @@ function EditTodo(props) {
   return (
     <>
       <form onSubmit={handleSubmit} className="TodoForm">
-        <input type="text" value={value} onChange={(e) => setValue(e.target.value)} />
+        <input type="text" value={value} onChange={(e) => setValue(e.target.value)} className=""/>
       </form>
     </>
   )

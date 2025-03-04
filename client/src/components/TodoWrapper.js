@@ -4,5 +4,6 @@ import {InputTodo} from "./InputTodo";
 import {EditTodo} from "./EditTodo";
 
 function TodoWrapper(){
-  
+
 }
+export default TodoWrapper;

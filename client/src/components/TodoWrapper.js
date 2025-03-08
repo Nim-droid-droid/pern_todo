@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 
 
 function TodoWrapper(){
-  const [todos, setTodos] = useState();
+  const [todos, setTodos] = useState([]);
   return();
 }
 export default TodoWrapper;

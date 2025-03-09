@@ -5,8 +5,7 @@ import {EditTodo} from "./EditTodo";
 import { v4 as uuidv4 } from "uuid";
 
 
-function TodoWrapper(){
+export default function TodoWrapper(){
   const [todos, setTodos] = useState([]);
   return();
 }
-export default TodoWrapper;

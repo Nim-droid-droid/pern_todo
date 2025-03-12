@@ -8,7 +8,9 @@ import { v4 as uuidv4 } from "uuid";
 export default function TodoWrapper(){
   const [todos, setTodos] = useState([]);
 
-  function addTodo(todo){}
+  function addTodo(todo){
+    setTodos()
+  }
 
   return();
 }

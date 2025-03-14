@@ -9,7 +9,9 @@ export default function TodoWrapper(){
   const [todos, setTodos] = useState([]);
 
   function addTodo(todo){
-    setTodos([...todos])
+    setTodos([...todos],
+      { id:}
+    )
   }
 
   return();

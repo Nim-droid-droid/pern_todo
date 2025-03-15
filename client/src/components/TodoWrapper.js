@@ -10,7 +10,7 @@ export default function TodoWrapper(){
 
   function addTodo(todo){
     setTodos([...todos],
-      { id:}
+      { id:uuidv4()}
     )
   }
 

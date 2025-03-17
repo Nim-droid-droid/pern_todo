@@ -11,7 +11,8 @@ export default function TodoWrapper(){
   function addTodo(todo){
     setTodos([...todos],
       { id:uuidv4(),
-        task:}
+        task:todo
+      }
     )
   }
 

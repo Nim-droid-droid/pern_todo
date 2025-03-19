@@ -12,7 +12,7 @@ export default function TodoWrapper(){
     setTodos([...todos],
       { id:uuidv4(),
         task:todo, 
-        completed:,
+        completed: false
       }
     )
   }

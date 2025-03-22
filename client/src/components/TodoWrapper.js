@@ -9,13 +9,14 @@ export default function TodoWrapper(){
   const [todos, setTodos] = useState([]);
 
   function addTodo(todo){
-    setTodos([...todos],
+    setTodos([...todos,
       { id:uuidv4(),
         task:todo, 
-        completed: false, isEditing: false
+        completed: false, 
+        isEditing: false
       }
-    )
+    ]);
   }
-
+    
   return();
 }

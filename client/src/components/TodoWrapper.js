@@ -17,7 +17,7 @@ export default function TodoWrapper(){
       }
     ]);
   }
-    const deleteTodo = () => 
+    const deleteTodo = (id) => 
     
   return();
 }

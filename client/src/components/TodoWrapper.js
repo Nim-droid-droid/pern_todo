@@ -17,7 +17,7 @@ export default function TodoWrapper(){
       }
     ]);
   }
-    const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id ));
+    const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
     
   return();
 }

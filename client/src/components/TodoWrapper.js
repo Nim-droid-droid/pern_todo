@@ -17,7 +17,10 @@ export default function TodoWrapper(){
       }
     ]);
   }
-    const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
+  
+  const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
     
+  const toggleComplete = () => {
+  }
   return();
 }

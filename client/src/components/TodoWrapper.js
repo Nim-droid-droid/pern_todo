@@ -21,7 +21,9 @@ export default function TodoWrapper(){
   const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
     
   const toggleComplete = (id) => {
-    setTodos();
+    setTodos(
+      todos.map()
+    );
   }
   return();
 }

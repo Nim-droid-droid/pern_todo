@@ -22,7 +22,8 @@ export default function TodoWrapper(){
     
   const toggleComplete = (id) => {
     setTodos(
-      todos.map()
+      todos.map((todo) =>
+      )
     );
   }
   return();

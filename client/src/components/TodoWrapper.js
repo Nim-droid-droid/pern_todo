@@ -28,6 +28,6 @@ export default function TodoWrapper(){
     );
   }
 
-  function edit(){}
+  const editTodo = () => {}
   return();
 }

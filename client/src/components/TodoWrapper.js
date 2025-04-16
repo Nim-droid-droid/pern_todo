@@ -28,6 +28,9 @@ export default function TodoWrapper(){
     );
   }
 
-  const editTodo = (id) => {}
+  const editTodo = (id) => {
+    setTodos(
+    );
+  }
   return();
 }

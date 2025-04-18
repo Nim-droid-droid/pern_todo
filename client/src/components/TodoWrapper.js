@@ -30,7 +30,7 @@ export default function TodoWrapper(){
 
   const editTodo = (id) => {
     setTodos(
-      todos.map(() =>
+      todos.map((todo) =>
       )
     );
   }

@@ -36,7 +36,7 @@ export default function TodoWrapper(){
     );
   }
 
-  const editTask = (task) => {
+  const editTask = (task, id) => {
 
   };
   return();

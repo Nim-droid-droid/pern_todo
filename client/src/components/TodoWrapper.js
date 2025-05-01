@@ -38,7 +38,7 @@ export default function TodoWrapper(){
 
   const editTask = (task, id) => {
     setTodos(
-      todos
+      todos.map()
     );
   };
   return();

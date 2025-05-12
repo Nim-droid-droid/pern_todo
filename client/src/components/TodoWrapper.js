@@ -39,7 +39,7 @@ export default function TodoWrapper(){
   const editTask = (task, id) => {
     setTodos(
       todos.map((todo) =>
-        todo.id === id ? { ...todo, task, isEditing: todo } : 
+        todo.id === id ? { ...todo, task, isEditing: !todo } : 
       )
     );
   };

@@ -44,7 +44,7 @@ export default function TodoWrapper(){
     );
   };
   return(
-    <div className="">
+    <div className="TodoWrapper">
     </div>
   );
 }

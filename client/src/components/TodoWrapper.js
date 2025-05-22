@@ -46,7 +46,7 @@ export default function TodoWrapper(){
   return(
     <div className="TodoWrapper">
       <h1>Get Things Done !</h1>
-      <TodoForm/>
+      <TodoForm addTodo={} />
     </div>
   );
 }

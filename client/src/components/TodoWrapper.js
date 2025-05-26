@@ -48,7 +48,7 @@ export default function TodoWrapper(){
       <h1>Get Things Done !</h1>
       <TodoForm addTodo={addTodo} />
       {/* display todos */}
-      {todos}
+      {todos.map()}
     </div>
   );
 }

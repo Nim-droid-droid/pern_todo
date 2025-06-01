@@ -49,7 +49,9 @@ export default function TodoWrapper(){
       <TodoForm addTodo={addTodo} />
       {/* display todos */}
       {todos.map((todo) =>
-        todo.isEditing ? <EditTodoForm /> : )}
+        todo.isEditing ? (
+          <EditTodoForm editTodo={} />
+        ) : )}
     </div>
   );
 }

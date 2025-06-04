@@ -50,7 +50,7 @@ export default function TodoWrapper(){
       {/* display todos */}
       {todos.map((todo) =>
         todo.isEditing ? (
-          <EditTodoForm editTodo={editTask} task={} />
+          <EditTodoForm editTodo={editTask} task={todo} />
         ) : )}
     </div>
   );

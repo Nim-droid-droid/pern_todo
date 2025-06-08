@@ -53,7 +53,8 @@ export default function TodoWrapper(){
           <EditTodoForm editTodo={editTask} task={todo} />
         ) : (
           <Todo
-            key={todo}/>
+            key={todo.id}
+          />
         )
       )}
     </div>

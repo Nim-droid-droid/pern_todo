@@ -56,6 +56,7 @@ export default function TodoWrapper(){
             key={todo.id}
             task={todo}
             deleteTodo={deleteTodo}
+            editTodo={}
           />
         )
       )}

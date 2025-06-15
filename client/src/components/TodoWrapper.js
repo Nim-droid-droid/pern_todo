@@ -57,6 +57,7 @@ export default function TodoWrapper(){
             task={todo}
             deleteTodo={deleteTodo}
             editTodo={editTodo}
+            toggleComplete={}
           />
         )
       )}

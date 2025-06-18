@@ -6,8 +6,12 @@ import { v4 as uuidv4 } from "uuid";
 
 
 export default function TodoWrapper(){
-  // Maintains an array of to-do items. 
+  // Maintains an array of to-do items. Each item is expected to be an object like:
+  // {
+  // }
+
   const [todos, setTodos] = useState([]);
+
 
   function addTodo(todo){
     setTodos([...todos,
@@ -19,8 +23,10 @@ export default function TodoWrapper(){
     ]);
   }
   
+
   const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
     
+
   const toggleComplete = (id) => {
     setTodos(
       todos.map((todo) =>
@@ -29,6 +35,7 @@ export default function TodoWrapper(){
     );
   }
 
+
   const editTodo = (id) => {
     setTodos(
       todos.map((todo) =>
@@ -36,6 +43,7 @@ export default function TodoWrapper(){
       )
     );
   }
+
 
   const editTask = (task, id) => {
     setTodos(

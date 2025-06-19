@@ -8,8 +8,8 @@ import { v4 as uuidv4 } from "uuid";
 export default function TodoWrapper(){
   // Maintains an array of to-do items. Each item is expected to be an object like:
   // {
+  // id: 
   // }
-
   const [todos, setTodos] = useState([]);
 
 

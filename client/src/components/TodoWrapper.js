@@ -9,7 +9,9 @@ export default function TodoWrapper(){
   // Maintains an array of to-do items. Each item is expected to be an object like:
   // {
   // id: "unique-id",
+  // task: 
   // }
+
   const [todos, setTodos] = useState([]);
 
 
@@ -55,16 +57,12 @@ export default function TodoWrapper(){
   return(
     <div className="TodoWrapper">
       <h1>Get Things Done !</h1>
-
       <TodoForm addTodo={addTodo} />
       {/* display todos */}
-
       {todos.map((todo) =>
         todo.isEditing ? (
-
           <EditTodoForm editTodo={editTask} task={todo} />
         ) : (
-
           <Todo
             key={todo.id}
             task={todo}

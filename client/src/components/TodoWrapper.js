@@ -9,8 +9,11 @@ export default function TodoWrapper(){
   // Maintains an array of to-do items. Each item is expected to be an object like:
   // {
   // id: "unique-id",
-  // task: "do something"
+  // task: "do something",
+  // completed: 
   // }
+
+
   const [todos, setTodos] = useState([]);
 
 

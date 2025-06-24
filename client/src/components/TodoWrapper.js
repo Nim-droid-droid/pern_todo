@@ -10,9 +10,8 @@ export default function TodoWrapper(){
   // {
   // id: "unique-id",
   // task: "do something",
-  // completed: 
+  // completed: false
   // }
-
 
   const [todos, setTodos] = useState([]);
 

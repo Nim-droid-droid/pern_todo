@@ -13,9 +13,10 @@ export default function TodoWrapper(){
   // completed: false,
   // isEditing: false
   // }
+
   const [todos, setTodos] = useState([]);
 
-
+  // Adds a new to-do to the list.
   function addTodo(todo){
     setTodos([...todos,
       { id:uuidv4(),

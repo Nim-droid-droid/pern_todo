@@ -14,6 +14,7 @@ export default function TodoWrapper(){
   // isEditing: false
   // }
 
+
   const [todos, setTodos] = useState([]);
 
   // Adds a new to-do to the list.
@@ -30,7 +31,7 @@ export default function TodoWrapper(){
   // Removes a to-do based on its id.
   const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
     
-
+  // Toggles the completed state of a to-do.
   const toggleComplete = (id) => {
     setTodos(
       todos.map((todo) =>

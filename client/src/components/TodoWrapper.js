@@ -14,7 +14,7 @@ export default function TodoWrapper(){
   // isEditing: false
   // }
 
-
+  
   const [todos, setTodos] = useState([]);
 
   // Adds a new to-do to the list.
@@ -40,7 +40,7 @@ export default function TodoWrapper(){
     );
   }
 
-
+  // Toggles isEditing to enable/disable editing mode.
   const editTodo = (id) => {
     setTodos(
       todos.map((todo) =>
@@ -49,7 +49,7 @@ export default function TodoWrapper(){
     );
   }
 
-
+  // Updates the task value and exits editing mode.
   const editTask = (task, id) => {
     setTodos(
       todos.map((todo) =>

@@ -14,7 +14,7 @@ export default function TodoWrapper(){
   // isEditing: false
   // }
 
-  
+  // State to hold the list of todos
   const [todos, setTodos] = useState([]);
 
   // Adds a new to-do to the list.

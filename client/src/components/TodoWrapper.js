@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 
 
 export default function TodoWrapper(){
-  // Maintains an array of to-do items. Each item is expected to be an object like:
+  // Maintains an array of to-do items. Each todo is an object:
   // {
   // id: "unique-id",
   // task: "do something",

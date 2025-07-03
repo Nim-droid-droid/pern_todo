@@ -20,7 +20,8 @@ export default function TodoWrapper(){
   // Adds a new to-do to the list.
   function addTodo(todo){
     setTodos([...todos,
-      { id:uuidv4(),
+      { 
+        id: uuidv4(),        // Generate a unique ID for each todo
         task:todo, 
         completed: false, 
         isEditing: false

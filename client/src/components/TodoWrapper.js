@@ -22,8 +22,8 @@ export default function TodoWrapper(){
     setTodos([...todos,
       { 
         id: uuidv4(),        // Generate a unique ID for each todo
-        task:todo, 
-        completed: false, 
+        task: todo,          // The task description
+        completed: false,
         isEditing: false
       }
     ]);

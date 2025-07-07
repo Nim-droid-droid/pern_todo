@@ -23,7 +23,7 @@ export default function TodoWrapper(){
       { 
         id: uuidv4(),        // Generate a unique ID for each todo
         task: todo,          // The task description
-        completed: false,    // Initially not completed
+        completed: false,   // Whether the task is completed. Not completed initially
         isEditing: false     // Initially not in editing mode
       }
     ]);

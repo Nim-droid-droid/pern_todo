@@ -69,6 +69,7 @@ export default function TodoWrapper(){
           <EditTodoForm editTodo={editTask} task={todo} />
         ) : (
           <Todo
+            // Otherwise, render the todo display
             key={todo.id}
             task={todo}
             deleteTodo={deleteTodo}

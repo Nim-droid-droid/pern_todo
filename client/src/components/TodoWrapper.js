@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {ListTodos} from "./ListTodos"; // Importing ListTodos component
-import {InputTodo} from "./InputTodo";
+import {InputTodo} from "./InputTodo"; // Importing InputTodo component 
 import {EditTodo} from "./EditTodo";
 import { v4 as uuidv4 } from "uuid";
 

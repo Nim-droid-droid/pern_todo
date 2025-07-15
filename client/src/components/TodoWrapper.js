@@ -4,7 +4,9 @@ import {InputTodo} from "./InputTodo"; // Importing InputTodo component
 import {EditTodo} from "./EditTodo"; // Importing EditTodo component 
 import { v4 as uuidv4 } from "uuid"; // Importing UUID library for generating unique IDs
 
-/***List of to dos left*/
+/***List of to dos left
+ * incorporate ListTodos component
+*/
 
 export default function TodoWrapper(){
   // Maintains an array of to-do items. Each todo is an object:

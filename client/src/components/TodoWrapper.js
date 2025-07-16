@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid"; // Importing UUID library for generating un
 
 /***List of to dos left
  * incorporate ListTodos component
+ * incorporate InputTodo component
 */
 
 export default function TodoWrapper(){

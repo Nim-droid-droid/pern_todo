@@ -20,7 +20,7 @@ export default function TodoWrapper(){
   // }
 
   // State to hold the list of todos
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([]);  // Initialize empty list of todos
 
   // Adds a new to-do to the list.
   function addTodo(todo){

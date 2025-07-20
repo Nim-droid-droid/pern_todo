@@ -34,7 +34,7 @@ export default function TodoWrapper(){
     ]);
   }
   
-  // Removes a to-do based on its id.
+  // Removes a to-do based on if it has a matching ID
   const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
     
   // Toggles the completed state of a to-do.

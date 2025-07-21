@@ -41,6 +41,7 @@ export default function TodoWrapper(){
   const toggleComplete = (id) => {
     setTodos(
       todos.map((todo) =>
+        // Keep existing todos
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );

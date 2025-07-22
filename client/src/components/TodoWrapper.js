@@ -42,6 +42,7 @@ export default function TodoWrapper(){
     setTodos(
       todos.map((todo) =>
         // Keep existing todos
+        // Flip the completed status
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );

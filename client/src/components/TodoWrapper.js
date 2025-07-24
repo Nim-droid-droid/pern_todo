@@ -70,6 +70,7 @@ export default function TodoWrapper(){
   return(
     <div className="TodoWrapper">
       <h1>Get Things Done !</h1>
+      {/* Input component to add new todos */}
       <TodoForm addTodo={addTodo} />
       {/* Render list of todos */}
       {/* display todos */}

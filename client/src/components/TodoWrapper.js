@@ -71,7 +71,8 @@ export default function TodoWrapper(){
     <div className="TodoWrapper">
       <h1>Get Things Done !</h1>
       {/* Input component to add new todos */}
-      <InputTodo />
+      {/* switch out TodoForm for InputTodo*/}
+      <InputTodo addTodo={addTodo} />
 
       <TodoForm addTodo={addTodo} />
       {/* Render list of todos */}

@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from "uuid"; // Importing UUID library for generating un
  * incorporate ListTodos component
  * incorporate InputTodo component
  * incorporate EditTodo component
+ * add styling
 */
 
 export default function TodoWrapper(){

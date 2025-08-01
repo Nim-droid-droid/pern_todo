@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from "uuid"; // Importing UUID library for generating un
  * incorporate ListTodos component
  * incorporate InputTodo component
  * incorporate EditTodo component
- * add styling - preferably similar to the soft flat colour palette similar to Structure app
+ * add styling - preferably similar to the soft flat colour palette similar to Structure app or the minimalistic colour palette similar to Noion
 */
 
 export default function TodoWrapper(){

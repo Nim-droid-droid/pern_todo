@@ -11,6 +11,7 @@ import { v4 as uuidv4 } from "uuid"; // Importing UUID library for generating un
  * add styling - preferably similar to the soft flat colour palette similar to Structure app or the minimalistic colour palette & design similar to Noion. Line work is thin & simple or thick & in muted colours.
  * Layout also similar to Structure app, clean lines and a very simple format.
  * ADDITIONAL STYLING
+    Inspiration
 */
 
 export default function TodoWrapper(){

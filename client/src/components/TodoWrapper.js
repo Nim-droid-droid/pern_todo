@@ -12,6 +12,7 @@ import { v4 as uuidv4 } from "uuid"; // Importing UUID library for generating un
  * Layout also similar to Structure app, clean lines and a very simple format.
  * ADDITIONAL STYLING
     Inspiration
+    Colour palette
 */
 
 export default function TodoWrapper(){

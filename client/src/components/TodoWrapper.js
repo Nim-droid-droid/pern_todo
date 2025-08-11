@@ -14,6 +14,7 @@ import { v4 as uuidv4 } from "uuid"; // Importing UUID library for generating un
     Inspiration
     Colour palette
     Line art
+    Layout
 */
 
 export default function TodoWrapper(){

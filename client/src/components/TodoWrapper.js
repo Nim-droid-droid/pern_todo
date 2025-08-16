@@ -13,7 +13,7 @@ import { v4 as uuidv4 } from "uuid"; // Importing UUID library for generating un
  * ADDITIONAL STYLING
     Inspiration: Notion and Structure.
     Colour palette: Notion
-    Line art
+    Line art: Notion
     Layout
 */
 

@@ -14,6 +14,7 @@ import { v4 as uuidv4 } from "uuid"; // Importing UUID library for generating un
     Inspiration: Notion and Structure.
     Colour palette: Notion
       Primary Line colour: Black
+      Accent colour:
     Line art: Notion
     Layout: Structure 
 */
